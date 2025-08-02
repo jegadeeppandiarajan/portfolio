@@ -28,7 +28,7 @@ const features = [
   },
 ];
 
-const aboutMe = `I'm a passionate full-stack developer with a drive for building impactful digital experiences. With a solid foundation in modern web technologies and a love for creative UI/UX, I thrive on solving real-world problems through code and design.`;
+const aboutMe = `I’m an aspiring Full Stack and Cloud Developer with a passion for building seamless, scalable digital solutions. I thrive on crafting clean, efficient code and transforming ideas into impactful user experiences. With a strong focus on problem-solving, I aim to deliver real value through technology, combining creativity with technical precision.`;
 
 const interests = [
   "Full Stack Development",

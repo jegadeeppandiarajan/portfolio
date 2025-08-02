@@ -172,7 +172,7 @@ const Hero = () => {
               className="px-4 mb-6 text-lg font-light tracking-wide text-gray-300 md:text-xl lg:text-2xl md:mb-8"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Aspiring Full Stack Developer & Cloud Devloper
+              Aspiring Full Stack & Cloud Devloper
             </motion.p>
           </motion.div>
 
@@ -182,9 +182,10 @@ const Hero = () => {
             className="max-w-2xl px-4 mx-auto mb-8 text-base font-light leading-relaxed text-gray-400 md:text-lg md:mb-12"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Crafting elegant digital experiences with clean code and creative
-            design. Passionate about problem-solving and delivering value
-            through technology.
+            Dedicated to building elegant, high-performance digital experiences
+            through clean code and intuitive design. Passionate about solving
+            real-world problems and driving innovation with cutting-edge
+            technology.
           </motion.p>
 
           {/* Social links */}

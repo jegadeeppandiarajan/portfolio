@@ -1,43 +1,33 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  WorkspacePremium,
-  Code,
-  Cloud,
-  ArrowOutward,
-} from "@mui/icons-material";
+import { WorkspacePremium, Code, Cloud } from "@mui/icons-material";
 
 // Import your certification images here
-// You will need to create these files in your assets folder
-import certImage1 from "../assets/images/certifications/github-foundations.jpg"; // Replace with your image
-import certImage2 from "../assets/images/certifications/java-programming.jpg"; // Replace with your image
-// import certImage3 from "../assets/images/certifications/typewriting.jpg"; // Replace with your image
-import certImage4 from "../assets/images/certifications/oracle-oci.jpg"; // Replace with your image
+import certImage1 from "../assets/images/certifications/github-foundations.jpg";
+import certImage2 from "../assets/images/certifications/java-programming.jpg";
+import certImage4 from "../assets/images/certifications/oracle-oci.jpg";
 
 const certifications = [
   {
-    image: certImage1, // New image property
+    image: certImage1,
     icon: <WorkspacePremium fontSize="large" />,
     title: "GitHub Foundations Certification",
     issuer: "GitHub",
-    link: "https://www.linkedin.com/in/jegadeep-pandiarajan/details/certifications/", // Replace with your actual GitHub cert link
-    color: "#fbbf24", // Yellow
+    color: "#fbbf24",
   },
   {
-    image: certImage2, // New image property
+    image: certImage2,
     icon: <Code fontSize="large" />,
     title: "Java Programming",
     issuer: "Guvi Platform",
-    link: "https://example.com/java-cert", // Replace with your actual Java cert link
-    color: "#4ade80", // Green
+    color: "#4ade80",
   },
   {
-    image: certImage4, // New image property
+    image: certImage4,
     icon: <Cloud fontSize="large" />,
     title: "Oracle Cloud Developer",
     issuer: "Oracle",
-    link: "https://example.com/oci-cert", // Replace with your actual OCI cert link
-    color: "#a855f7", // Purple
+    color: "#a855f7",
   },
 ];
 
@@ -70,14 +60,11 @@ const Certifications = () => (
 
       <div className="grid max-w-4xl grid-cols-1 gap-6 mx-auto md:grid-cols-2 md:gap-10">
         {certifications.map((cert, idx) => (
-          <motion.a
+          <motion.div
             key={cert.title}
-            href={cert.link}
-            target="_blank"
-            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, amount: 0.2 }} // amount:0.2 to trigger early
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             className="relative flex flex-col items-start overflow-hidden transition-transform duration-300 glass-effect rounded-2xl hover:scale-105 group"
             whileHover={{
@@ -85,7 +72,6 @@ const Certifications = () => (
             }}
             whileTap={{ scale: 0.98 }}
           >
-            {/* Dynamic border on hover */}
             <motion.div
               className="absolute inset-0 pointer-events-none rounded-2xl"
               initial={{
@@ -101,12 +87,11 @@ const Certifications = () => (
               transition={{ duration: 0.4 }}
             />
 
-            {/* Certification Image */}
             <motion.div className="relative w-full overflow-hidden">
               <motion.img
                 src={cert.image}
                 alt={cert.title}
-                className="object-cover w-full h-auto rounded-t-2xl aspect-video" // Use aspect-video for a consistent ratio
+                className="object-cover w-full h-auto rounded-t-2xl aspect-video"
                 initial={{ scale: 1.05, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 whileHover={{ scale: 1.1 }}
@@ -114,7 +99,6 @@ const Certifications = () => (
               />
             </motion.div>
 
-            {/* Certification Details */}
             <div className="relative z-10 flex flex-row items-center flex-1 w-full p-5 space-x-4 md:p-6 md:space-x-5">
               <div
                 className="flex-shrink-0 text-white group-hover:text-transparent"
@@ -136,18 +120,8 @@ const Certifications = () => (
                   {cert.issuer}
                 </motion.span>
               </div>
-              {/* Link arrow icon */}
-              <motion.div
-                className="relative z-10 text-gray-400 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-                initial={{ x: 10, scale: 0.8 }}
-                whileInView={{ x: 0, scale: 1 }}
-                whileHover={{ x: 5, color: cert.color }}
-                transition={{ duration: 0.3 }}
-              >
-                <ArrowOutward fontSize="small" />
-              </motion.div>
             </div>
-          </motion.a>
+          </motion.div>
         ))}
       </div>
     </div>
